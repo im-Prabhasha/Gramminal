@@ -1,5 +1,5 @@
 ```markdown
-# Telegram Terminal Client
+## Telegram Terminal Client
 
 A modern, lightweight Telegram client that runs entirely inside your terminal. Built with [Telethon](https://github.com/LonamiWebs/Telethon) and [Textual](https://github.com/Textualize/textual).
 
