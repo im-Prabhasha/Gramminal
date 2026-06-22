@@ -1,0 +1,218 @@
+/* ===================================================================
+   Telegram Terminal — Textual Stylesheet
+   Dark theme inspired by Telegram Desktop
+   =================================================================== */
+
+/* ---- Global ---- */
+
+Screen {
+    background: $background;
+    color: $text;
+    layout: vertical;
+}
+
+/* ---- Session select screen ---- */
+
+#session-container {
+    width: 80;
+    height: auto;
+    margin: 2 4;
+    padding: 1 2;
+    background: $surface;
+    border: round $primary;
+}
+
+#title {
+    text-align: center;
+    color: $primary;
+    text-style: bold;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+#subtitle {
+    text-align: center;
+    color: $text-muted;
+    margin-bottom: 1;
+    width: 100%;
+}
+
+#loading-hint {
+    text-align: center;
+    color: $warning;
+    margin: 1 0;
+    width: 100%;
+}
+
+#session-list {
+    width: 100%;
+    height: auto;
+    max-height: 18;
+}
+
+#footer {
+    text-align: center;
+    color: $text-muted;
+    margin-top: 1;
+    width: 100%;
+}
+
+/* ---- Chat list screen ---- */
+
+#chat-list-root {
+    width: 100%;
+    height: 100%;
+}
+
+#tab-bar {
+    width: 100%;
+    height: 3;
+    dock: top;
+    background: $surface;
+    border-bottom: solid $primary 30%;
+}
+
+#tab-bar > Button {
+    width: 1fr;
+    height: 3;
+    margin: 0;
+    padding: 0 1;
+}
+
+#tab-bar > Button.active-tab {
+    background: $primary 25%;
+    text-style: bold;
+    border-bottom: solid $accent;
+}
+
+#search-hint {
+    width: auto;
+    height: 3;
+    content-align: right middle;
+    color: $text-muted;
+    padding: 0 2;
+}
+
+#chat-search {
+    dock: top;
+    width: 100%;
+    height: 3;
+    background: $panel;
+    padding: 0 2;
+}
+
+#chat-list {
+    width: 100%;
+    height: 1fr;
+}
+
+/* ---- Chat view screen ---- */
+
+#chat-view-root {
+    width: 100%;
+    height: 100%;
+}
+
+#chat-header {
+    width: 100%;
+    height: 3;
+    dock: top;
+    background: $surface;
+    border-bottom: solid $primary 30%;
+    padding: 0 1;
+}
+
+#back-hint {
+    width: auto;
+    height: 3;
+    content-align: left middle;
+    color: $accent;
+    text-style: bold;
+}
+
+#chat-title {
+    width: 1fr;
+    height: 3;
+    content-align: center middle;
+    color: $primary;
+    text-style: bold;
+}
+
+#search-container {
+    dock: top;
+    width: 100%;
+    height: 3;
+    background: $panel;
+    padding: 0 1;
+}
+
+#msg-search {
+    width: 1fr;
+    height: 3;
+}
+
+#search-result-count {
+    width: auto;
+    height: 3;
+    content-align: left middle;
+    color: $text-muted;
+    padding: 0 1;
+}
+
+#message-list {
+    width: 100%;
+    height: 1fr;
+}
+
+#empty-hint {
+    text-align: center;
+    color: $text-muted;
+    padding: 2;
+}
+
+/* ---- Status bar ---- */
+
+#status-bar {
+    dock: bottom;
+    width: 100%;
+    height: 1;
+    background: $surface;
+    color: $text-muted;
+    padding: 0 1;
+}
+
+/* ---- ListItem styling (applies to both session and chat lists) ---- */
+
+ListItem {
+    height: auto;
+    padding: 0 1;
+    border-bottom: solid $surface 60%;
+}
+
+ListItem:hover {
+    background: $primary 10%;
+}
+
+ListItem:focus {
+    background: $primary 20%;
+}
+
+/* ---- Message items ---- */
+
+MessageItem {
+    width: 100%;
+    padding: 0 1;
+    margin: 0;
+}
+
+/* ---- Scrollbar styling ---- */
+
+ScrollableContainer::-webkit-scrollbar {
+    background: $dark;
+}
+
+/* ---- Utility ---- */
+
+.hidden {
+    display: none;
+}
